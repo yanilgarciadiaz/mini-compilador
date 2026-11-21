@@ -1,0 +1,21 @@
+// Prueba
+float saldo_cuenta = 1500.50;
+int intentos = 3;
+@usuario_activo = 0;
+
+while (intentos > 0) {
+    #codigo_error = 99;
+
+    if (saldo_cuenta >= 500.0) {
+        print("Operacion exitosa");
+        saldo_cuenta = saldo_cuenta - 200.0;
+    } else {
+        if (intentos ? 1) {
+            print("Advertencia de intentos");
+        }
+    }
+    
+    intentos = intentos - 1;
+}
+
+variable_rota$ = 1;

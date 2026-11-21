@@ -1,0 +1,81 @@
+const int LIMITE = 5;
+const float IVA = 0.18;
+bool activo = true;
+int suma = 0;
+
+int cuadrado(int n) {
+    return n * n;
+}
+
+bool esPar(int n) {
+    return n % 2 == 0;
+}
+
+float conImpuesto(float precio) {
+    return precio + precio * IVA;
+}
+
+void saludar(string nombre) {
+    print("Hola", nombre);
+}
+
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+saludar("Yanil");
+
+for (int i = 1; i <= LIMITE; i++) {
+    if (i == 2) {
+        continue;
+    }
+    if (i > 4) {
+        break;
+    }
+    suma += cuadrado(i);
+}
+print("Suma de cuadrados:", suma);
+
+int contador = 3;
+do {
+    print("Cuenta regresiva", contador);
+    contador--;
+} while (contador > 0 && activo);
+
+int opcion = 2;
+switch (opcion) {
+    case 1:
+        print("Opcion uno");
+        break;
+    case 2:
+        print("Opcion dos");
+    case 3:
+        print("Cae en la tres");
+        break;
+    default:
+        print("Otra opcion");
+}
+
+string dia = "lunes";
+switch (dia) {
+    case "sabado":
+    case "domingo":
+        print("Fin de semana");
+        break;
+    default:
+        print("Dia laboral");
+}
+
+int n = 10;
+n /= 4;
+n *= 3;
+n -= 1;
+n %= 4;
+print("n =", n, "7 es par?", esPar(7), "5! =", factorial(5));
+
+if (!esPar(7) || n > 100) {
+    print("Total con ITBIS:", conImpuesto(100.0));
+}

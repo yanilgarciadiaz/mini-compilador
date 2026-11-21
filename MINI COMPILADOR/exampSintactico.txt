@@ -1,0 +1,6 @@
+float saldo_cuenta = 1500.50
+int intentos = 3;
+
+if (saldo_cuenta >= 500.0) {
+    print("Operacion exitosa");
+}

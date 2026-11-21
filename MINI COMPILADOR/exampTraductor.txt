@@ -1,0 +1,23 @@
+string cliente = "Yanil";
+int cantidad = 7;
+float precio = 12.5;
+float total = 0.0;
+
+for (int i = 1; i <= cantidad; i = i + 1) {
+    total = total + precio * i;
+}
+
+int lotes = cantidad / 2;          // division entera: 3
+
+if (total > 500.0) {
+    print("Descuento para", cliente);
+} else if (total > 100.0) {
+    print("Precio normal para", cliente);
+} else {
+    print("Compra pequena");
+}
+
+while (lotes > 0) {
+    print("Lote", lotes, "total", total - lotes * 10);
+    lotes = lotes - 1;
+}
